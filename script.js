@@ -1,5 +1,61 @@
-// Database Material Coding
+// Database Material Coding (PAWN Dihapus, Digantikan & Ditambah C++, Python, C#, SQL, Dart, Java, Go)
 const SCRIPT_DATA = {
+  cpp: {
+    title: "C++ Programming",
+    icon: "fa-solid fa-code",
+    desc: "Bahasa berkinerja tinggi untuk sistem, game engine, dan aplikasi desktop.",
+    topics: [
+      {
+        name: "Struktur Dasar & Output cout",
+        purpose: "Pintu masuk utama program C++ menggunakan pustaka iostream.",
+        code: `#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Halo dari C++!" << endl;\n    return 0;\n}`
+      },
+      {
+        name: "Percabangan if - else",
+        purpose: "Mengeksekusi blok kode berdasarkan kondisi tertentu.",
+        code: `#include <iostream>\nusing namespace std;\n\nint main() {\n    int skor = 85;\n    \n    if (skor >= 75) {\n        cout << "Selamat, Anda LULUS!" << endl;\n    } else {\n        cout << "Maaf, coba lagi." << endl;\n    }\n    return 0;\n}`
+      },
+      {
+        name: "Perulangan for Loop",
+        purpose: "Mengulang iterasi kode dengan jumlah perulangan yang pasti.",
+        code: `for (int i = 1; i <= 5; i++) {\n    cout << "Perulangan ke-" << i << endl;\n}`
+      }
+    ]
+  },
+  python: {
+    title: "Python 3",
+    icon: "fa-brands fa-python",
+    desc: "Bahasa pemrograman populer yang sangat bersih dan mudah dipelajari.",
+    topics: [
+      {
+        name: "Logika Conditional if-elif-else",
+        purpose: "Pemeriksaan kondisi bercabang dalam Python.",
+        code: `umur = 18\n\nif umur >= 17:\n    print("Sudah bisa bikin KTP")\nelse:\n    print("Belum cukup umur")`
+      },
+      {
+        name: "Function (Def)",
+        purpose: "Membuat blok kode yang dapat dipanggil berkali-kali.",
+        code: `def sapa(nama):\n    return f"Halo, {nama}! Selamat belajar Python."\n\nprint(sapa("Budi"))`
+      }
+    ]
+  },
+  js: {
+    title: "JavaScript (ES6+)",
+    icon: "fa-brands fa-js",
+    desc: "Bahasa pemrograman logika interaktif untuk membuat web hidup.",
+    topics: [
+      {
+        name: "Percabangan IF - ELSE",
+        purpose: "Mengeksekusi kode berdasarkan kondisi logika tertentu (Benar/Salah).",
+        code: `let nilai = 85;\n\nif (nilai >= 75) {\n  console.log("Selamat, Anda LULUS!");\n} else {\n  console.log("Maaf, Anda harus remidi.");\n}`
+      },
+      {
+        name: "Looping FOR",
+        purpose: "Mengulang instruksi kode secara otomatis hingga batas yang ditentukan.",
+        code: `for (let i = 1; i <= 5; i++) {\n  console.log("Perulangan ke-" + i);\n}`
+      }
+    ]
+  },
   html: {
     title: "HTML5 (HyperText Markup Language)",
     icon: "fa-brands fa-html5",
@@ -34,56 +90,39 @@ const SCRIPT_DATA = {
       }
     ]
   },
-  js: {
-    title: "JavaScript (ES6+)",
-    icon: "fa-brands fa-js",
-    desc: "Bahasa pemrograman logika interaktif untuk membuat web hidup.",
+  csharp: {
+    title: "C# (C-Sharp)",
+    icon: "fa-solid fa-terminal",
+    desc: "Bahasa populer dari Microsoft untuk game Unity dan enterprise app.",
     topics: [
       {
-        name: "Percabangan IF - ELSE",
-        purpose: "Mengeksekusi kode berdasarkan kondisi logika tertentu (Benar/Salah).",
-        code: `let nilai = 85;\n\nif (nilai >= 75) {\n  console.log("Selamat, Anda LULUS!");\n} else {\n  console.log("Maaf, Anda harus remidi.");\n}`
-      },
-      {
-        name: "Looping FOR",
-        purpose: "Mengulang instruksi kode secara otomatis hingga batas yang ditentukan.",
-        code: `for (let i = 1; i <= 5; i++) {\n  console.log("Perulangan ke-" + i);\n}`
+        name: "Kondisi if-else pada C#",
+        purpose: "Pengecekan logika kondisi pada C#.",
+        code: `using System;\n\nclass Program {\n    static void Main() {\n        int status = 1;\n        if (status == 1) {\n            Console.WriteLine("Server Online");\n        } else {\n            Console.WriteLine("Server Offline");\n        }\n    }\n}`
       }
     ]
   },
-  python: {
-    title: "Python 3",
-    icon: "fa-brands fa-python",
-    desc: "Bahasa pemrograman populer yang sangat bersih dan mudah dipelajari.",
+  sql: {
+    title: "SQL Database",
+    icon: "fa-solid fa-database",
+    desc: "Bahasa kueri untuk mengelola data pada basis data relasional.",
     topics: [
       {
-        name: "Logika Conditional if-elif-else",
-        purpose: "Pemeriksaan kondisi bercabang dalam Python.",
-        code: `umur = 18\n\nif umur >= 17:\n    print("Sudah bisa bikin KTP")\nelse:\n    print("Belum cukup umur")`
+        name: "SELECT & WHERE",
+        purpose: "Mengambil data dari tabel database dengan kriteria kondisi tertentu.",
+        code: `-- Mengambil pengguna yang berstatus aktif\nSELECT id, username, email \nFROM users \nWHERE status = 'active';`
       }
     ]
   },
-  lua: {
-    title: "Lua Scripting",
-    icon: "fa-solid fa-moon",
-    desc: "Bahasa ringan yang umum dipakai untuk script game (FiveM, Roblox, dll).",
+  dart: {
+    title: "Dart (Flutter)",
+    icon: "fa-solid fa-mobile-screen",
+    desc: "Bahasa utama framework Flutter untuk pembuatan aplikasi mobile Android/iOS.",
     topics: [
       {
-        name: "Fungsi & Kondisi if...then",
-        purpose: "Mengatur kondisi dalam game logic.",
-        code: `local playerHealth = 100\n\nif playerHealth > 0 then\n    print("Pemain masih hidup")\nelse\n    print("Pemain telah gugur")\nend`
-      }
-    ]
-  },
-  pawn: {
-    title: "PAWN Scripting",
-    icon: "fa-solid fa-code",
-    desc: "Bahasa yang digunakan untuk server multiplayer SA:MP / open.mp.",
-    topics: [
-      {
-        name: "Variabel & percabangan if-else",
-        purpose: "Memeriksa status pemain atau uang dalam server.",
-        code: `new uangPemain = 5000;\n\nif(uangPemain >= 1000)\n{\n    SendClientMessage(playerid, -1, "Uang kamu cukup!");\n}\nelse\n{\n    SendClientMessage(playerid, -1, "Uang kamu kurang!");\n}`
+        name: "Pengondisian if-else",
+        purpose: "Mengontrol alur logika aplikasi mobile.",
+        code: `void main() {\n  bool isLoggedIn = true;\n  if (isLoggedIn) {\n    print("Navigasi ke Dashboard");\n  } else {\n    print("Navigasi ke Login");\n  }\n}`
       }
     ]
   }
@@ -97,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   init3DEngine();
   renderSidebar();
   navigateTo('dashboard');
+  setupAiAssistant();
 });
 
 // Render Menu Sidebar
@@ -170,7 +210,7 @@ function renderDashboardView(container) {
         <p class="hero-desc">Pilih modul bahasa pemrograman di menu sebelah kiri atau kartu di bawah ini untuk mempelajari sintaks, logika percabangan, serta contoh penggunaannya.</p>
         <div class="hero-stats-row">
           <div class="stat-box">
-            <div class="stat-number">6+</div>
+            <div class="stat-number">8+</div>
             <div class="stat-label">Bahasa Modul</div>
           </div>
           <div class="stat-box">
@@ -190,7 +230,8 @@ function renderDashboardView(container) {
         <div class="profile-role">Creator & Web Developer</div>
         <p class="profile-bio">Pembuat platform edukasi koding interaktif berbasis visual 3D.</p>
         <div class="profile-tags">
-          <span class="tag">HTML/CSS</span>
+          <span class="tag">C++</span>
+          <span class="tag">Python</span>
           <span class="tag">JavaScript</span>
           <span class="tag">3D Web</span>
         </div>
@@ -265,6 +306,69 @@ function filterModules() {
       navItem.style.display = 'none';
     }
   });
+}
+
+// Setup Event Listeners AI Assistant Chatbot Widget
+function setupAiAssistant() {
+  const fab = document.getElementById('aiFabBtn');
+  const chatWindow = document.getElementById('aiChatWindow');
+  const closeBtn = document.getElementById('aiCloseBtn');
+
+  fab.addEventListener('click', () => {
+    chatWindow.classList.toggle('hidden');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    chatWindow.classList.add('hidden');
+  });
+}
+
+// Fungsi Mengirim Pesan ke AI Bot
+function sendAiMessage() {
+  const input = document.getElementById('aiInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  const chatBody = document.getElementById('aiChatBody');
+
+  // Tambahkan gelembung pesan user
+  const userBubble = document.createElement('div');
+  userBubble.className = 'chat-bubble user';
+  userBubble.innerText = text;
+  chatBody.appendChild(userBubble);
+
+  input.value = '';
+  chatBody.scrollTop = chatBody.scrollHeight;
+
+  // Indikator ketik bot
+  const botBubble = document.createElement('div');
+  botBubble.className = 'chat-bubble bot';
+  botBubble.innerText = 'Sedang berpikir...';
+  chatBody.appendChild(botBubble);
+  chatBody.scrollTop = chatBody.scrollHeight;
+
+  // Simulasi jawaban AI Assistant
+  setTimeout(() => {
+    botBubble.innerText = generateAiResponse(text);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }, 800);
+}
+
+// Jawaban Simulasi Pintar AI Scripting Assistant
+function generateAiResponse(prompt) {
+  const p = prompt.toLowerCase();
+  
+  if (p.includes('if') || p.includes('kondisi') || p.includes('percabangan')) {
+    return "Logika `if` digunakan untuk mengeksekusi kode jika suatu syarat bernilai BENAR (true). Contoh pada C++:\n\nif (uang >= 100) {\n    cout << 'Beli item';\n} else {\n    cout << 'Uang tidak cukup';\n}";
+  } else if (p.includes('cpp') || p.includes('c++')) {
+    return "C++ adalah bahasa berkinerja tinggi. Struktur umumnya:\n\n#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << 'Hello World!';\n    return 0;\n}";
+  } else if (p.includes('loop') || p.includes('for') || p.includes('while') || p.includes('perulangan')) {
+    return "Perulangan (Loop) digunakan untuk mengulang baris kode secara otomatis. Contoh `for` di C++ / JS:\n\nfor(int i = 0; i < 5; i++) {\n    // Dijalankan 5 kali\n}";
+  } else if (p.includes('fungsi') || p.includes('function') || p.includes('def')) {
+    return "Fungsi/Function digunakan untuk membungkus sekumpulan perintah agar bisa dipanggil berkali-kali secara fleksibel.";
+  } else {
+    return `Jawaban AI untuk "${prompt}":\n\nUntuk mempelajari sintaks lebih rinci, kamu bisa memilih modul terkait (C++, Python, JS, dll) di sidebar kiri platform ini!`;
+  }
 }
 
 // Three.js 3D Background Interactive Engine
