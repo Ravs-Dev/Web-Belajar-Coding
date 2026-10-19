@@ -205,7 +205,7 @@ function renderDashboardView(container) {
   container.innerHTML = `
     <div class="dashboard-hero">
       <div class="hero-welcome-card">
-        <div class="hero-badge-tag"><i class="fa-solid fa-sparkles"></i> PLATFORM BELAJAR SCRIPT 3D</div>
+        <div class="hero-badge-tag"><i class="fa-solid fa-sparkles"></i> PLATFORM BELAJAR SCRIPT</div>
         <h2 class="hero-title">Selamat Datang di Hub Coding Interactive</h2>
         <p class="hero-desc">Pilih modul bahasa pemrograman di menu sebelah kiri atau kartu di bawah ini untuk mempelajari sintaks, logika percabangan, serta contoh penggunaannya.</p>
         <div class="hero-stats-row">
@@ -228,7 +228,7 @@ function renderDashboardView(container) {
         </div>
         <div class="profile-name">Developer Name</div>
         <div class="profile-role">Creator & Web Developer</div>
-        <p class="profile-bio">Pembuat platform edukasi koding interaktif berbasis visual 3D.</p>
+        <p class="profile-bio">Pembuat platform edukasi coding interaktif berbasic</p>
         <div class="profile-tags">
           <span class="tag">C++</span>
           <span class="tag">Python</span>
