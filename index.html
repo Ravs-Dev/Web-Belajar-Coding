@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script3D Studio - Platform Belajar Coding 3D</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Three.js Canvas Engine -->
+  <canvas id="canvas3d"></canvas>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand" onclick="navigateTo('dashboard')">
+        <i class="fa-solid &lt;i class=&quot;fa-solid fa-cube logo-icon&quot;&gt;&lt;/i&gt;"></i>
+        <span class="brand-text">SCRIPT<span class="highlight">3D</span></span>
+      </div>
+
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="moduleSearch" placeholder="Cari bahasa / materi..." oninput="filterModules()">
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-section-title">UTAMA</div>
+        <a class="nav-item active" onclick="navigateTo('dashboard')" id="nav-dashboard">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Dashboard Utama</span>
+        </a>
+
+        <div class="nav-section-title">MODUL PEMBELAJARAN</div>
+        <div id="sidebarModulesList">
+          <!-- Modul diisi secara dinamis dari script.js -->
+        </div>
+      </nav>
+
+      <div class="creator-badge">
+        <div class="creator-avatar-wrap">
+          <div class="creator-avatar-placeholder">
+            <i class="fa-solid fa-user-ninja"></i>
+          </div>
+        </div>
+        <div class="creator-info">
+          <div class="creator-title">Dibuat Oleh:</div>
+          <div class="creator-name">Developer / Creator</div>
+          <div class="creator-status"><span class="dot"></span> Online</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Top Bar / Header -->
+      <header class="topbar">
+        <div class="page-title-wrap">
+          <i class="fa-solid fa-compass title-icon"></i>
+          <h1 id="topbarTitle">Dashboard Overview</h1>
+        </div>
+        
+        <div class="topbar-actions">
+          <div class="badge-status">
+            <i class="fa-solid fa-atom fa-spin"></i>
+            <span>3D Engine Active</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dynamic Page Container -->
+      <div class="content-body" id="mainView">
+        <!-- Content diisi secara dinamis via JavaScript -->
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
