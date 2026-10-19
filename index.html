@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ravs Web Platform Belajar Coding</title>
+  <title>Ravs - Platform Belajar Coding 3D</title>
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,7 +24,7 @@
     <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <div class="brand" onclick="navigateTo('dashboard')">
-        <i class="fa-solid &lt;i class=&quot;fa-solid fa-cube logo-icon&quot;&gt;&lt;/i&gt;"></i>
+        <i class="fa-solid fa-cube logo-icon"></i>
         <span class="brand-text">SCRIPT<span class="highlight">3D</span></span>
       </div>
 
@@ -85,6 +85,31 @@
 
     </main>
 
+  </div>
+
+  <!-- Floating AI Assistant Button (Kanan Bawah) -->
+  <button id="aiFabBtn" class="ai-fab-btn" title="Tanya AI Scripting">
+    <i class="fa-solid fa-robot"></i>
+  </button>
+
+  <!-- AI Assistant Chat Widget -->
+  <div id="aiChatWindow" class="ai-chat-window hidden">
+    <div class="ai-chat-header">
+      <div class="ai-chat-title">
+        <i class="fa-solid fa-brain"></i>
+        <span>AI Scripting Assistant</span>
+      </div>
+      <button id="aiCloseBtn" class="ai-close-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div id="aiChatBody" class="ai-chat-body">
+      <div class="chat-bubble bot">
+        Halo! Saya **AI Scripting Assistant**. Ada pertanyaan seputar koding **C++**, **Python**, **JavaScript**, **C#**, **SQL**, atau bahasa lain? Tanyakan saja di bawah ini!
+      </div>
+    </div>
+    <div class="ai-chat-footer">
+      <input type="text" id="aiInput" placeholder="Tanyakan seputar script..." onkeydown="if(event.key==='Enter') sendAiMessage()">
+      <button id="aiSendBtn" onclick="sendAiMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
   </div>
 
   <!-- Three.js CDN -->
